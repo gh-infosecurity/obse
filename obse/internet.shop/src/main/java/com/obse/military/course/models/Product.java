@@ -2,7 +2,7 @@ package com.obse.military.course.models;
 
 import com.obse.military.course.models.enums.ProductCategory;
 
-public class Product {
+public class Product implements Comparable {
     private String manufacturer;
     private String description;
     private ProductCategory category;
@@ -59,6 +59,17 @@ public class Product {
 
     public String getProductID() {
         return productID = manufacturer.concat(title).concat(String.valueOf(price));
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (this.price > ((Product) o).price) {
+            return 1;
+        } else if (this.price < ((Product) o).price) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 
     @Override

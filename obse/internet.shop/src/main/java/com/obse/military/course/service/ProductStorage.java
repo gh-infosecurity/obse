@@ -1,5 +1,7 @@
-package com.obse.military.course.models;
+package com.obse.military.course.service;
 
+import com.obse.military.course.models.Product;
+import com.obse.military.course.models.interfaces.ProductStorageI;
 import org.apache.commons.collections.CollectionUtils;
 
 import java.util.ArrayList;
@@ -7,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ProductStorage {
+public class ProductStorage implements ProductStorageI{
     private Map<String, List<Product>> products;
 
     public ProductStorage() {
