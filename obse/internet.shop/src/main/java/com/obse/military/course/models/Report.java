@@ -11,6 +11,7 @@ public class Report {
 
     public void print() {
         for(Product product: products){
+            System.out.print(product.getCategory()+"\t");
             System.out.print(product.getManufacturer()+"\t");
             System.out.print(product.getTitle() +"\t");
             System.out.println(product.getPrice());
